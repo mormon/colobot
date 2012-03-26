@@ -19,12 +19,10 @@
 
 
 #define STRICT
-#define D3D_OVERLOADS
 
-
-
+#ifdef WINDOWS
 enum KeyRank;
-
+#endif
 
 // Types possibles pour les ressources texte.
 
@@ -140,8 +138,8 @@ enum ResType
 #define RT_MESSAGE_WIN		200
 #define RT_MESSAGE_LOST		201
 
-
-static CD3DEngine*	g_engine = 0;
+#ifdef WINDOWS
+//static CD3DEngine*	g_engine = 0;
 static char			g_gamerName[100];
 
 extern void		SetEngine(CD3DEngine *engine);
@@ -150,6 +148,6 @@ extern BOOL		SearchKey(char *cmd, KeyRank &key);
 extern void		PutKeyName(char* dst, char* src);
 extern BOOL		GetResource(ResType type, int num, char* text);
 extern BOOL		GetResourceBase(ResType type, int num, char* text);
-
+#endif
 
 #endif //_RESTEXT_H_

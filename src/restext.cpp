@@ -15,16 +15,16 @@
 // * along with this program. If not, see  http://www.gnu.org/licenses/.// restext.cpp
 
 #define STRICT
-#define D3D_OVERLOADS
 
 #include <stdio.h>
-#include "struct.h"
-#include "D3DEngine.h"
+#include <string.h>
+//#include "struct.h"
+//#include "D3DEngine.h"
 #include "language.h"
-#include "misc.h"
-#include "event.h"
-#include "object.h"
-#include "cbot\resource.h"
+//#include "misc.h"
+//#include "event.h"
+//#include "object.h"
+//#include "cbot\resource.h"
 #include "restext.h"
 
 
@@ -34,14 +34,13 @@
 
 
 // Donne le pointeur au moteur.
-
+#ifdef WINDOWS
 void SetEngine(CD3DEngine *engine)
 {
 	g_engine = engine;
 }
 
 // Donne le nom du joueur.
-
 void SetGlobalGamerName(char *name)
 {
 	strcpy(g_gamerName, name);
@@ -159,8 +158,9 @@ BOOL GetResource(ResType type, int num, char* text)
 
 
 // Retourne le texte d'une ressource.
+#endif
 
-BOOL GetResourceBase(ResType type, int num, char* text)
+bool GetResourceBase(ResType type, int num, char* text)
 {
 	text[0] = 0;
 

@@ -17,8 +17,6 @@
 #ifndef _STRUCT_H_
 #define	_STRUCT_H_
 
-#include <d3d.h>
-
 
 #define NAN		999999
 
@@ -32,19 +30,19 @@ struct D3DVERTEX2
 	float		tu2, tv2;
 
 	D3DVERTEX2() { }
-	D3DVERTEX2(const D3DVECTOR& _v, const D3DVECTOR& _n, float _tu=0.0f, float _tv=0.0f, float _tu2=0.0f, float _tv2=0.0f)
-	{
-		x   = _v.x;
-		y   = _v.y;
-		z   = _v.z;
-		nx  = _n.x;
-		ny  = _n.y;
-		nz  = _n.z;
-		tu  = _tu;
-		tv  = _tv;
-		tu2 = _tu2;
-		tv2 = _tv2;
-	}
+//	D3DVERTEX2(const D3DVECTOR& _v, const D3DVECTOR& _n, float _tu=0.0f, float _tv=0.0f, float _tu2=0.0f, float _tv2=0.0f)
+//	{
+//		x   = _v.x;
+//		y   = _v.y;
+//		z   = _v.z;
+//		nx  = _n.x;
+//		ny  = _n.y;
+//		nz  = _n.z;
+//		tu  = _tu;
+//		tv  = _tv;
+//		tu2 = _tu2;
+//		tv2 = _tv2;
+//	}
 };
 
 

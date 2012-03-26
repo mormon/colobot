@@ -19,7 +19,7 @@
 #ifndef _EVENT_H_
 #define	_EVENT_H_
 
-
+#ifdef WINDOWS
 #include "struct.h"
 
 
@@ -33,7 +33,7 @@
 
 
 class CInstanceManager;
-
+#endif
 
 #define MAXEVENT	100
 

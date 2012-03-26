@@ -16,36 +16,36 @@
 
 // language.h
 
-#define _FULL			TRUE		// CoLoBoT
-#define _SCHOOL			FALSE		// CeeBot-A or Teen
-  #define _TEEN			FALSE		// FALSE for CeeBot-A, TRUE for CeeBot-Teen
-  #define _EDU			FALSE
-  #define _PERSO		FALSE
-  #define _CEEBOTDEMO	FALSE
-#define _NET			FALSE
-#define _DEMO			FALSE		// DEMO only CoLoBoT (with _Full = FALSE)!
+#define _FULL			true		// CoLoBoT
+#define _SCHOOL			false		// CeeBot-A or Teen
+  #define _TEEN			false		// FALSE for CeeBot-A, TRUE for CeeBot-Teen
+  #define _EDU			false
+  #define _PERSO		false
+  #define _CEEBOTDEMO	false
+#define _NET			false
+#define _DEMO			false		// DEMO only CoLoBoT (with _Full = FALSE)!
 
-#define _FRENCH			TRUE
-#define _ENGLISH		FALSE
-#define _GERMAN			FALSE
-#define _WG				FALSE
-#define _POLISH			FALSE
+#define _FRENCH			false
+#define _ENGLISH		true
+#define _GERMAN			false
+#define _WG				false
+#define _POLISH			false
 
-#define _NEWLOOK		FALSE		// FALSE for CoLoBoT, TRUE for all CeeBot
-#define _SOUNDTRACKS	FALSE		// always FALSE since InitAudioTrackVolume crop in Vista
+#define _NEWLOOK		false		// FALSE for CoLoBoT, TRUE for all CeeBot
+#define _SOUNDTRACKS	false		// always FALSE since InitAudioTrackVolume crop in Vista
 
 
 // Verifications
 
 #if !_FULL & !_SCHOOL & !_NET & !_DEMO
--> no version chosen!
+#error -> no version chosen!
 #endif
 
 #if _SCHOOL
 #if !_EDU & !_PERSO & !_CEEBOTDEMO
--> EDU or PERSO or CEEBOTDEMO?
+#error -> EDU or PERSO or CEEBOTDEMO?
 #endif
 #if _EDU & _PERSO & _CEEBOTDEMO
--> EDU and PERSO and CEEBOTDEMO not at the same time!!!
+#error -> EDU and PERSO and CEEBOTDEMO not at the same time!!!
 #endif
 #endif
