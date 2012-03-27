@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.6)
+project (colobot)
+add_executable(colobot main.cpp)
+include_directories(/usr/include/irrlicht)
+#find_library(IRRLICHT irrlicht)
+target_link_libraries(colobot Irrlicht)
