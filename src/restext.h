@@ -17,13 +17,15 @@
 #ifndef _RESTEXT_H_
 #define	_RESTEXT_H_
 
-
 #define STRICT
 #define D3D_OVERLOADS
 
 
+#include "d3dengine.h"
+#include "event.h"
 
-enum KeyRank;
+
+
 
 
 // Types possibles pour les ressources texte.

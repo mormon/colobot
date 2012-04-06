@@ -18,16 +18,16 @@
 #define	_TASKMANAGER_H_
 
 
+#include "misc.h"
+#include "object.h"
+#include "taskmanip.h"
+#include "taskgoto.h"
+#include "taskshield.h"
+#include "taskflag.h"
+
+
 class CInstanceManager;
 class CTask;
-
-enum TaskManipOrder;
-enum TaskManipArm;
-enum TaskFlagOrder;
-enum TaskGotoGoal;
-enum TaskGotoCrash;
-enum TaskShieldMode;
-enum ObjectType;
 
 
 

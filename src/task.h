@@ -18,6 +18,9 @@
 #define	_TASK_H_
 
 
+#include "misc.h"
+
+
 class CInstanceManager;
 class CD3DEngine;
 class CEngine;

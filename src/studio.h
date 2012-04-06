@@ -18,6 +18,10 @@
 #define	_STUDIO_H_
 
 
+#include "object.h"
+#include "script.h"
+
+
 class CInstanceManager;
 class CD3DEngine;
 class CEvent;

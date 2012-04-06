@@ -18,6 +18,9 @@
 #define	_TASKSRECOVER_H_
 
 
+#include "d3dengine.h"
+
+
 class CInstanceManager;
 class CTerrain;
 class CBrain;

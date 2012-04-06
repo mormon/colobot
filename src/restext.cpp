@@ -19,12 +19,12 @@
 
 #include <stdio.h>
 #include "struct.h"
-#include "D3DEngine.h"
+#include "d3dengine.h"
 #include "language.h"
 #include "misc.h"
 #include "event.h"
 #include "object.h"
-#include "cbot\resource.h"
+#include "CBot/resource.h"
 #include "restext.h"
 
 

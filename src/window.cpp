@@ -22,7 +22,7 @@
 #include <d3d.h>
 
 #include "struct.h"
-#include "D3DEngine.h"
+#include "d3dengine.h"
 #include "language.h"
 #include "math3d.h"
 #include "event.h"
@@ -58,8 +58,6 @@ CWindow::CWindow(CInstanceManager* iMan) : CControl(iMan)
 {
 	int		i;
 
-	CControl::CControl(iMan);
-
 	for ( i=0 ; i<MAXWINDOW ; i++ )
 	{
 		m_table[i] = 0;
@@ -90,7 +88,6 @@ CWindow::CWindow(CInstanceManager* iMan) : CControl(iMan)
 CWindow::~CWindow()
 {
 	Flush();
-	CControl::~CControl();
 }
 
 
@@ -992,7 +989,7 @@ BOOL CWindow::EventProcess(const Event &event)
 				else if ( ((flags & (1<<0)) && (flags & (1<<3))) ||
 						  ((flags & (1<<1)) && (flags & (1<<2))) )
 				{
-					m_pressMouse = D3DMOUSEMOVEI;  // \ 
+					m_pressMouse = D3DMOUSEMOVEI;  // \ //
 				}
 				else if ( ((flags & (1<<0)) && (flags & (1<<1))) ||
 						  ((flags & (1<<2)) && (flags & (1<<3))) )

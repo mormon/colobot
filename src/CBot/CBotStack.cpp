@@ -75,12 +75,12 @@ CBotStack* CBotStack::FirstStack()
 CBotStack::CBotStack(CBotStack* ppapa)
 {
 	// constructeur doit exister, sinon le destructeur n'est jamais appelé !
-	__asm int	3;
+	ASM_TRAP();
 }
 
 CBotStack::~CBotStack()
 {
-	__asm int	3;	// utiliser	Delete() à la place
+	ASM_TRAP();	// utiliser	Delete() à la place
 }
 
 void CBotStack::Delete()
@@ -696,7 +696,7 @@ void CBotStack::AddVar(CBotVar* pVar)
 	*pp = pVar;					// ajoute à la suite
 
 #ifdef	_DEBUG
-	if ( pVar->GivUniqNum() == 0 ) __asm int 3;
+	if ( pVar->GivUniqNum() == 0 ) ASM_TRAP();
 #endif
 }
 
@@ -1094,7 +1094,7 @@ BOOL CBotVar::RestoreState(FILE* pf, CBotVar* &pVar)
 			}
 			break;
 		default:
-			__asm int 3;
+			ASM_TRAP();
 		}
 
 		if ( pPrev != NULL ) pPrev->m_next = pNew;
@@ -1391,7 +1391,7 @@ void CBotCStack::AddVar(CBotVar* pVar)
 	*pp = pVar;					// ajoute à la suite
 
 #ifdef	_DEBUG
-	if ( pVar->GivUniqNum() == 0 ) __asm int 3;
+	if ( pVar->GivUniqNum() == 0 ) ASM_TRAP();
 #endif
 }
 

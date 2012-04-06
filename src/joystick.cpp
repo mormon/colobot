@@ -80,7 +80,7 @@ BOOL CALLBACK EnumAxesCallback( const DIDEVICEOBJECTINSTANCE* pdidoi,
         return DIENUM_STOP;
 
     // Set the UI to reflect what axes the joystick supports
-    switch( pdidoi->dwOfs )
+    /*switch( pdidoi->dwOfs )
     {
         case DIJOFS_X:
 			OutputDebugString("EnumAxesCallback -x\n");
@@ -106,7 +106,7 @@ BOOL CALLBACK EnumAxesCallback( const DIDEVICEOBJECTINSTANCE* pdidoi,
         case DIJOFS_SLIDER(1):
 			OutputDebugString("EnumAxesCallback -s1\n");
             break;
-    }
+    }*/
 
     return DIENUM_CONTINUE;
 }
@@ -120,7 +120,8 @@ BOOL InitDirectInput(HINSTANCE hInst, HWND hWnd)
 
     // Register with the DirectInput subsystem and get a pointer
     // to a IDirectInput interface we can use.
-    hr = DirectInputCreateEx( hInst, DIRECTINPUT_VERSION,IID_IDirectInput7, (LPVOID*)&g_pDI, NULL );
+	return FALSE;
+    //hr = DirectInputCreateEx( hInst, DIRECTINPUT_VERSION,IID_IDirectInput7, (LPVOID*)&g_pDI, NULL );
     if( FAILED(hr) )  return FALSE;;
 
     // Look for a simple joystick we can use for this sample program.

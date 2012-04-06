@@ -18,6 +18,11 @@
 #define	_PYRO_H_
 
 
+#include "d3dengine.h"
+#include "object.h"
+#include "misc.h"
+
+
 class CInstanceManager;
 class CD3DEngine;
 class CTerrain;
@@ -61,8 +66,6 @@ enum PyroType
 };
 
 
-enum ObjectType;
-enum Error;
 
 
 typedef struct
