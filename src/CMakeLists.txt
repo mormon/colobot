@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-cmake_minimum_required (VERSION 2.6)
-project (colobot)
-add_executable(colobot main.cpp)
-add_executable(packer metafile.cpp)
-include_directories(/usr/include/irrlicht)
-#find_library(IRRLICHT irrlicht)
-target_link_libraries(colobot Irrlicht)
-=======
 # CBot shared library
 add_subdirectory(CBot)
 
@@ -149,4 +140,3 @@ add_executable(colobot ${SOURCES})
 
 target_link_libraries(colobot CBot ${LIBS})
 
->>>>>>> upstream/mingw
