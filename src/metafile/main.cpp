@@ -15,17 +15,17 @@
 // * along with this program. If not, see  http://www.gnu.org/licenses/.// MetaFile
 // décembre 2000, Daniel Roux
 
-#include <windows.h>
+//#include <windows.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
 
 
-#define _FULL			FALSE
-#define _SCHOOL			TRUE
-#define _CEEBOTDEMO		TRUE
-#define _DEMO			FALSE
+//#define _FULL			false
+//#define _SCHOOL			true
+//#define _CEEBOTDEMO		true
+//#define _DEMO			false
 
 #define MAXMETAFILE		256
 
@@ -141,13 +141,13 @@ void Codec(void* buffer, int len, int start)
 #endif
 
 
-BOOL ReadList(char *filename)
+bool ReadList(char *filename)
 {
 	FILE	*file;
 	int		len;
 
 	file = fopen(filename, "rb");
-	if ( file == 0 )  return FALSE;
+	if ( file == 0 )  return false;
 
 	fseek(file, 0, SEEK_END);
 	len = ftell(file);
@@ -158,7 +158,7 @@ BOOL ReadList(char *filename)
 	g_list[len] = 0;
 
 	fclose(file);
-	return TRUE;
+	return true;
 }
 
 
@@ -253,7 +253,7 @@ int main(int argc, char** argv)
 		header.len = RetLength(header.name);
 		header.start = start;
 		start += header.len;
-		Codec(&header, sizeof(Header), offset);
+		//Codec(&header, sizeof(Header), offset);
 		offset += sizeof(Header);
 		fwrite(&header, sizeof(Header), 1, dest);
 	}
@@ -291,7 +291,7 @@ int main(int argc, char** argv)
 		fread(buffer, len, 1, src);
 		fclose(src);
 
-		Codec(buffer, len, start);
+		//Codec(buffer, len, start);
 		fwrite(buffer, len, 1, dest);
 		free(buffer);
 		start += len;

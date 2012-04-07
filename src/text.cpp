@@ -15,14 +15,14 @@
 // * along with this program. If not, see  http://www.gnu.org/licenses/.// text.cpp
 
 #define STRICT
-#define D3D_OVERLOADS
+//#define D3D_OVERLOADS
 
-#include <windows.h>
+//#include <windows.h>
 #include <stdio.h>
-#include <d3d.h>
+//#include <d3d.h>
 
 #include "struct.h"
-#include "D3DEngine.h"
+//#include "D3DEngine.h"
 #include "language.h"
 #include "event.h"
 #include "misc.h"
