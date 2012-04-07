@@ -19,6 +19,7 @@
 
 
 #include "control.h"
+#include "struct.h"
 
 
 class CD3DEngine;

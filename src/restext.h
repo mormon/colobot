@@ -19,12 +19,18 @@
 #ifndef _RESTEXT_H_
 #define	_RESTEXT_H_
 
-
 #define STRICT
 
 #ifdef WINDOWS
 enum KeyRank;
+#define D3D_OVERLOADS
+
+
+#include "d3dengine.h"
+#include "event.h"
 #endif
+
+
 
 // Possible types of the text resources.
 

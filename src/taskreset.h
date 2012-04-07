@@ -18,6 +18,10 @@
 #define	_TASKRESET_H_
 
 
+#include "misc.h"
+#include "d3dengine.h"
+
+
 class CInstanceManager;
 class CTerrain;
 class CBrain;

@@ -18,6 +18,9 @@
 #define	_TASKWAIT_H_
 
 
+#include "misc.h"
+
+
 class CInstanceManager;
 class CTerrain;
 class CBrain;

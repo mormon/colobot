@@ -22,7 +22,7 @@
 #include <d3d.h>
 
 #include "struct.h"
-#include "D3DEngine.h"
+#include "d3dengine.h"
 #include "misc.h"
 #include "iman.h"
 #include "event.h"

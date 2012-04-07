@@ -18,6 +18,11 @@
 #define	_TASKMANIP_H_
 
 
+#include "task.h"
+#include "misc.h"
+#include "d3dengine.h"
+
+
 class CInstanceManager;
 class CTerrain;
 class CBrain;

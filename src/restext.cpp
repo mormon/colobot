@@ -35,24 +35,16 @@
 
 
 
-<<<<<<< HEAD
-// Donne le pointeur au moteur.
 #ifdef WINDOWS
-=======
 // Gives the pointer to the engine.
 
->>>>>>> upstream/master
 void SetEngine(CD3DEngine *engine)
 {
 	g_engine = engine;
 }
 
-<<<<<<< HEAD
-// Donne le nom du joueur.
-=======
 // Give the player's name.
 
->>>>>>> upstream/master
 void SetGlobalGamerName(char *name)
 {
 	strcpy(g_gamerName, name);
@@ -169,12 +161,8 @@ BOOL GetResource(ResType type, int num, char* text)
 }
 
 
-<<<<<<< HEAD
-// Retourne le texte d'une ressource.
 #endif
-=======
 // Returns the text of a resource.
->>>>>>> upstream/master
 
 bool GetResourceBase(ResType type, int num, char* text)
 {
